@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>TableWithJavascript</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll('button').forEach(function(button) {
+            button.onclick = function() {
+                document.querySelector('table').style.border = button.dataset.border;
+            }
+            });
+        });
+
+
+    </script>
+</head>
+
+<body>
+    <h1>Interview schedule</h1>
+
+    <button data-border="3px solid #db928c" id="red">Red</button>
+    <button data-border="3px solid #b3df99" id="green">Green</button>
+    <button data-border="3px solid #3655aa" id="blue">Blue</button>
+
+    <br><br>
+Border Size:
+<select>
+    <option style="display:none">Border Size</option>
+    <option data-border="10px" value="1">10px</option>
+    <option data-border="15px" value="2">15px</option>
+    <option data-border="20px" value="3">20px</option>
+</select>
+
+    <br><br>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Date</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Natalia Gonzalez</td>
+                <td>CEO</td>
+                <td>FEB 9, 2022</td>
+                <td>15:00 hrs</td>
+            </tr>
+            <tr>
+                <td>María González</td>
+                <td>CFM</td>
+                <td>FEB 10, 2022</td>
+                <td>12:30 hrs</td>
+            </tr>
+            <tr>
+                <td>Gonzalo Soto</td>
+                <td>DPO</td>
+                <td>FEB 11, 2022</td>
+                <td>10:30 hrs</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
